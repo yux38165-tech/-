@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif SC", serif;
+  --color-zhen-blue: #002b5c;
+  --color-zhen-gold: #c8a063;
+  --color-zhen-cream: #f8faff;
+}
+
+@layer base {
+  body {
+    @apply bg-[#f8faff] text-gray-900 font-sans;
+  }
+}
+
+.card-shadow {
+  box-shadow: 0 10px 30px rgba(0, 43, 92, 0.08);
+}
+
+.section-number {
+  @apply text-5xl font-bold text-zhen-blue/10 absolute -left-6 -top-4 italic;
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, #c8a063 0%, #e6d2b5 50%, #c8a063 100%);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #c8a063 0%, #b08d55 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
